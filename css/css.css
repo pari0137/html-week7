@@ -58,6 +58,7 @@ body{
 HTML{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 10px; /* makes the math a bit easier with ems and rems */
+    color: turquoise;
 }
 
 h2{
@@ -66,4 +67,14 @@ h2{
 
 p{
     font-size: 1.6rem; /* 16px based on root size of 10px */
+}
+
+/****************************************************************
+                    MAIN
+****************************************************************/
+
+/* STYLE THE ELEMENT WITH THE ID CONTAINER */
+#container{
+    width:1024px;
+    margin:20px;
 }
