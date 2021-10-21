@@ -58,7 +58,7 @@ body{
 HTML{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 10px; /* makes the math a bit easier with ems and rems */
-    color: turquoise;
+    color: cyan;
 }
 
 h2{
@@ -76,5 +76,35 @@ p{
 /* STYLE THE ELEMENT WITH THE ID CONTAINER */
 #container{
     width:1024px;
-    margin:20px;
+    margin:0 auto; /* 0 on the top and bottom and "auto" on the left and right
+    this will center the element in the browser window */
 }
+
+section{
+    margin:15px; /* margin is on the outside and puches other elements away */
+    border: 2px solid black;
+    padding: 20px 10px 15px 25px; /* padding is on the inside and pushes content away from the edge */
+    /* when you use four values in padding or margin, it's top, right, bottom, left */
+
+    /* you can style individually padding, margin (and even border) on each side of the element:
+    padding-top
+    padding-bottom
+    padding-left
+    padding-right*/
+}
+
+/* style the element with the class header-image */
+.header-image{
+    width:100%; /* 100% of the width of whatever element this image is inside of */
+}
+
+/*
+.larger span{
+    display:block;
+
+    width: 200px;
+    height: 100px; 
+    margin: 25px;
+    padding: 15px;
+    border: 2px solid greenyellow;
+} */
