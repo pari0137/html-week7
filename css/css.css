@@ -108,3 +108,119 @@ section{
     padding: 15px;
     border: 2px solid greenyellow;
 } */
+
+/****************************************************************
+                    NAV
+****************************************************************/
+
+nav{
+    height:44px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid greenyellow;
+}
+
+nav li{
+    float:left; /* this will make the li elements, which are block elements, sit next to eachother */
+}
+
+nav a{
+    display:block; /* make the anchor tags into boxes so we can do something interesting to them */
+    text-align: center;
+    margin: 0 5px; /* 0 on the top and bottom, 5 on the left and right */
+    text-decoration: none; /* removes underline from links */
+    width: 142px;
+    height: 44px;
+}
+
+/* target span, inside anchor tags, inside list items, inside the nav */
+nav li a span{
+    display: block;
+    float: left;
+    font-size: 1.6rem; /* 1.6 times the root fontsize in HTML */
+    line-height: 2.5em; /* 2.5 times the font size of this element */
+    color: greenyellow;
+}
+
+nav a img{
+    width: 22px;
+    padding: 0.7em 5px 0 15px; /* padding and margin can be set using multiple different units of measure
+    all of which are interchangable
+    0.7 times the elements font size to the padding on the top
+    5px to the padding on the right
+    0 padding on the bottom - 0 does not need a unit, 0 is always 0
+    15px to the padding on the left*/
+    float: left;
+}
+
+/* apply the same properties to the hover state of the links in the nav, and also the element with the class "current"*/
+nav a:hover, .current{
+    background: black;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+#play{
+    color: greenyellow;
+    /*float: right; /* floating it the opposite way of the other elements - so it sits
+    on the right of the screen */
+    font-size: 2.0rem;
+    background: black;
+    border: 1px solid greenyellow;
+    border-radius: 10px; /* makes the corners rounded */
+    padding: 0.5em;
+    height:auto; /* override the height set on the nav a - auto asks the browser to automatically
+    calculate the height based on the content inside the element */
+
+    /* use position fixed to make this button stay on sreen, even when the user scrolls */
+    position:fixed;
+    /* set it relative to the browser window using top/bottom, left/right */
+    top:5%;
+    right:10%;
+}
+
+/****************************************************************
+                    CONTENT
+****************************************************************/
+
+section{
+    margin: 2%; /* margin is on the outside and puches other elements away */
+    border: 2px solid black;
+    padding: 20px 10px 15px 25px; /* padding is on the inside and pushes content away from the edge */
+    /* when you use four values in padding or margin, it's top, right, bottom, left */
+
+    /* you can style individually padding, margin (and even border) on each side of the element:
+    padding-top
+    padding-bottom
+    padding-left
+    padding-right*/
+
+    width:46%;
+    height:200px;
+    float:left;
+    box-sizing: border-box; /* tell the browser to automatically calculate the size of this element
+    inclusing the border and padding - with the total width/height */
+}
+
+/* background color to test the article height */
+article{
+    background-color: grey;
+    padding-bottom: 50px;
+}
+
+/* applying the clearfix to the element
+/* the "asfter" section is attached to the bottom of the element */
+.clearfix:after{
+    content: ""; /* this and the display table below make the "after" section show up */
+    display: table;
+    clear: both;
+  }
+
+footer{
+    clear:both;
+}
+
+/* use float to make text wrap around an image */
+section p img{
+    float:left;
+}
+
